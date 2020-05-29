@@ -1,0 +1,45 @@
+Tables:
+    - TableName: todo
+      Columns:
+      - Name: title
+        DataType: varchar(500)
+        ColumnType: label
+        IsIndexed: true
+      - Name: url
+        DataType: varchar(200)
+        ColumnType: url
+        IsNullable: true
+      - Name: completed
+        DataType: int(1)
+        ColumnType: truefalse
+        DefaultValue: 'false'
+      - Name: schedule
+        DataType: date
+        ColumnType: date
+        IsNullable: true
+      - Name: order
+        ColumnName: item_order
+        DataType: int(4)
+        ColumnType: measurement
+        DefaultValue: '10'
+      - Name: text
+        DataType: text
+        ColumnType: content
+        IsNullable: true
+      Conformations:
+      - ColumnName: order
+        Tags: numeric
+      Validations:
+      - ColumnName: title
+    Tags: required
+    - TableName: project
+    Columns:
+    -   Name: name
+        DataType: varchar(200)
+        ColumnType: name
+        IsIndexed: true
+
+Relations:
+    - Subject: todo
+      Relation: has_one
+      Object: project
