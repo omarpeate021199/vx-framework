@@ -68,7 +68,7 @@ import {
 	Vector3,
 	VectorKeyframeTrack,
 	sRGBEncoding
-} from "../../../build/three.module.js";
+} from "../../../simpleViewer/build/three.module.js";
 
 var GLTFLoader = ( function () {
 

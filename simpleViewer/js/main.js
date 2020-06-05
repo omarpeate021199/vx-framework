@@ -1,7 +1,7 @@
 'use strict';
 
-import * as THREE from "/build/three.module.js";
-import { OrbitControls } from "/jsm/controls/OrbitControls.js";
+import * as THREE from "/simpleViewer/build/three.module.js";
+import { OrbitControls } from "/simpleViewer/jsm/controls/OrbitControls.js";
 
 //variables Globales
 var container;
@@ -30,12 +30,12 @@ function createScene() {
   scene = new THREE.Scene();
   var skybox = new THREE.CubeTextureLoader().load( [
 
-    '../assets/Skybox/skybox_right.png',//derecha
-    '../assets/Skybox/skybox_left.png', //izquierda
-    '../assets/Skybox/skybox_up.png',// arriba
-    '../assets/Skybox/skybox_down.png',//abajo
-    '../assets/Skybox/skybox_back.png',// atras
-    '../assets/Skybox/skybox_front.png' // frente
+    '../simpleViewer/assets/Skybox/skybox_right.png',//derecha
+    '../simpleViewer/assets/Skybox/skybox_left.png', //izquierda
+    '../simpleViewer/assets/Skybox/skybox_up.png',// arriba
+    '../simpleViewer/assets/Skybox/skybox_down.png',//abajo
+    '../simpleViewer/assets/Skybox/skybox_back.png',// atras
+    '../simpleViewer/assets/Skybox/skybox_front.png' // frente
 
   ] );
 
